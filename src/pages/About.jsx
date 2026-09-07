@@ -1,5 +1,5 @@
 import React from "react";
-import { skills, experiences } from "../constants";
+import { skillGroups, experiences } from "../constants";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CTA from "../components/CTA";
@@ -15,24 +15,29 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Aspiring Software Developer based in India, Specialising in Computer
-          Science and Engineering. Passionate about creating new solutions and
-          solving complex problems.
+          Senior Software Engineer building search, ranking, and GenAI
+          systems &mdash; hybrid retrieval over embeddings and BM25,
+          learning-to-rank models, and the applications on top of them.
         </p>
       </div>
 
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
-        <div className="mt-16 flex flex-wrap gap-12">
-          {skills.map((skill) => (
-            <div className="block-container w-20 h-20">
-              <div className="btn-back rounded-xl flex" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
+        <div className="mt-10 flex flex-col gap-8">
+          {skillGroups.map((group) => (
+            <div key={group.title}>
+              <p className="text-sm font-semibold uppercase tracking-wide text-blue-500">
+                {group.title}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm text-black-500 shadow-card"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
@@ -43,15 +48,12 @@ const About = () => {
         <h3 className="subhead-text">Work Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            I have worked as a Software Developer Intern for a{" "}
+            I'm currently a{" "}
             <span className="blue-gradient_text font-semibold drop-shadow">
-              SERB Sponsored Project{" "}
-            </span>{" "}
-            and researched on Fuzzy Topsis Method at{" "}
-            <span className="blue-gradient_text font-semibold drop-shadow">
-              IIIS Delhi
+              Senior Software Engineer at InfoEdge
             </span>
-            .
+            , building candidate recommendation, ranking, and GenAI systems
+            used across iimjobs and hirist.
           </p>
         </div>
         <div className="mt-12 flex">

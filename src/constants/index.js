@@ -1,220 +1,91 @@
-import { meta, shopify, starbucks, tesla} from "../assets/images";
 import city from "../assets/images/city.svg";
 import data from "../assets/images/data.svg";
-import doctor from "../assets/images/doctor.svg";   
+import doctor from "../assets/images/doctor.svg";
 import food from "../assets/images/food.svg";
 import llvm from "../assets/images/llvm.svg";
 import student from "../assets/images/student.svg";
-import iiis from "../assets/images/iiis.png";
-import iiitg from "../assets/images/iiitg.png";
-import aws from "../assets/images/AWS.jpg";
-import c from "../assets/images/c.svg";
-import docker from "../assets/images/docker.jpg";
-import java from "../assets/images/java.jpg";
-import linux from "../assets/images/linux.jpg";
-import python from "../assets/images/python.jpg";
-import mongo from "../assets/images/mongo.jpg";
-import sql from "../assets/images/sql.jpg";
-import psql from "../assets/images/psql.jpg";
-import sk from "../assets/images/sk.jpg";
-import tf from "../assets/images/tf.jpg";
-import pytorch from "../assets/images/pytorch.jpg";
+import briefcase from "../assets/images/briefcase.svg";
+import shoppingCart from "../assets/images/shopping-cart.svg";
+import networkGraph from "../assets/images/network-graph.svg";
 import {
-    car,
     contact,
-    css,
-    estate,
-    express,
-    git,
     github,
-    html,
-    javascript,
     linkedin,
-    mongodb,
-    motion,
-    mui,
-    nextjs,
-    nodejs,
-    pricewise,
-    react,
-    redux,
-    sass,
-    snapgram,
     summiz,
-    tailwindcss,
-    threads,
-    typescript
 } from "../assets/icons";
 
-import serb from "../assets/images/serb.png";
-
-export const skills = [
+export const skillGroups = [
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
+        title: "Languages",
+        items: ["C++", "Python", "Java", "TypeScript", "JavaScript", "SQL"],
     },
     {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
+        title: "AI / Machine Learning",
+        items: ["Recommendation Systems", "Learning-to-Rank", "LightGBM", "Optuna", "DistilBERT", "Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "Embeddings", "LLMs", "Google Gemini", "Prompt Engineering", "LangGraph"],
     },
     {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
+        title: "Search & Information Retrieval",
+        items: ["Semantic Search", "Vector Search", "Dense Retrieval", "ANN", "HNSW", "BM25", "Reciprocal Rank Fusion", "RAG", "Ranking Systems", "Qdrant", "Elasticsearch"],
     },
     {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
+        title: "Backend & Distributed Systems",
+        items: ["FastAPI", "Spring Boot", "Node.js", "NestJS", "Flask", "REST APIs", "Microservices", "Data Pipelines", "Background Workers", "Async Processing"],
     },
     {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
+        title: "Databases & Messaging",
+        items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "S3", "SQS", "Kafka", "RabbitMQ"],
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
+        title: "Frontend",
+        items: ["React.js", "Next.js", "Redux", "jQuery", "HTML5", "CSS3", "SSR"],
     },
     {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    // {
-    //     imageUrl: motion,
-    //     name: "Motion",
-    //     type: "Animation",
-    // },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
+        title: "Cloud & Infrastructure",
+        items: ["AWS", "GCP", "Azure", "Docker", "Linux", "NGINX", "Grafana", "Kibana", "CI/CD"],
     },
     {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: c,
-        name: "C++",
-        type: "Languages",
-    },
-    {
-        imageUrl: java,
-        name: "Java",
-        type: "Languages",
-    },
-    {
-        imageUrl: python,
-        name: "Python",
-        type: "Languages",
-    },
-    {
-        imageUrl: tf,
-        name: "TensorFlow",
-        type: "Machine Learning",
-    },
-    {
-        imageUrl: sk,
-        name: "SKlearn",
-        type: "Machine Learning",
-    },
-    {
-        imageUrl: pytorch,
-        name: "Pytorch",
-        type: "Machine Learning",
-    },
-    {
-        imageUrl: sql,
-        name: "MySQL",
-        type: "Databases",
-    },
-    {
-        imageUrl: psql,
-        name: "PostgreSQL",
-        type: "Databases",
-    },
-    {
-        imageUrl: aws,
-        name: "AWS",
-        type: "Cloud Computing",
-    },
-    {
-        imageUrl: docker,
-        name: "Docker",
-        type: "Container",
-    },
-    {
-        imageUrl: linux,
-        name: "LINUX",
-        type: "OS",
+        title: "Software Engineering",
+        items: ["Data Structures & Algorithms", "System Design", "Performance Optimization", "Unit Testing", "Integration Testing", "Observability", "Telemetry", "Production Debugging"],
     },
 ];
 
 export const experiences = [
     {
-        title: "Software Developer Intern",
-        company_name: "IIITG and SERB",
-        icon: serb,
+        title: "Senior Software Engineer",
+        company_name: "InfoEdge",
+        icon: briefcase,
         iconBg: "#accbe1",
-        date: "November 2023 - April 2024",
+        date: "May 2026 – Present",
         points: [
-            "Project titled ”Security and Privacy Preserved Automatic Health Emergency Detection and MSP Selection in IoT Based Smart Healthcare System.",
-            "Spearheading the development of the UI and encryption algorithm.",
-            "Designed a solution recommending healthcare facilities using WBAN model,MDRQ tree, and Homomorphic encryption with OAEP (SHA-256).",
+            "Built a hybrid retrieval and ranking system for 400K+ candidates combining dense ANN search, BM25, and RRF fusion with recruiter preference signals; cut recommendation latency from 4s to 500ms via parallel retrieval and optimized scoring.",
+            "Trained and evaluated Learning-to-Rank models on recruiter interaction and candidate-job fit signals to improve ranking quality for recommendations and applicant ordering.",
+            "Developed job/candidate embedding pipelines (Gemini, MySQL, S3, SQS, Qdrant) generating retrieval and similarity vectors for 500K+ candidate skill documents.",
+            "Fine-tuned a DistilBERT classifier on 30,863 labeled job records, reaching 79.5% accuracy and 0.751 macro-F1 for job category prediction.",
+            "Designed OpportunityOS, a FastAPI/LangGraph/Gemini/Next.js sales-intelligence platform surfacing competitor hiring signals for outreach.",
         ],
     },
     {
-        title: "Research",
-        company_name: "IIIS Delhi",
-        icon:iiis,
+        title: "Software Engineer",
+        company_name: "InfoEdge",
+        icon: briefcase,
         iconBg: "#fbc3bc",
-        date: "December 2023 – January 2024",
+        date: "Jul 2025 – May 2026",
         points: [
-            "Researched and applied Fuzzy TOPSIS method to optimize requirement selection for a Movie Ticket Booking System.",
-            "Identified and categorized over 60 requirements, prioritizing them during software development.",
+            "Built Gemini-powered job-posting assistance generating descriptions and structured metadata from title, skills, salary, and experience.",
+            "Added Server-Side Rendering to 4 major legacy jQuery/React pages, improving crawlability and cutting page-load time by 20%.",
+            "Built an internal cron-monitoring platform tracking scheduled-job health and syncing operational data to S3 for centralized observability.",
+            "Built a voice-agent prototype automating product demos across 4 sales offerings at an internal AI hackathon.",
         ],
     },
     {
-        title: "PRESIDENT-SGC",
-        company_name: "IIIT GUWAHATI",
-        icon: iiitg,
+        title: "Software Engineer Intern",
+        company_name: "InfoEdge",
+        icon: briefcase,
         iconBg: "#9fe2bf",
-        date: "August 2023 – July 2024",
+        date: "Jan 2025 – Jun 2025",
         points: [
-            "Responsible for maintaining the technical, cultural and sports domains of Student's Gymkhana Council of IIITG.",
-            "Successfully conducted 5 major fests, managing multiple teams and efficiently completing the tasks.",
-            "Led a team of 50 coordinators across different domains, conducting various events, competitions etc",
+            "Built full-stack modules for the Boomerang alumni-rehiring platform (React, Redux, NestJS, MongoDB, RabbitMQ, S3) covering profiles, referrals, applications, and async enrichment workers.",
+            "Developed internal admin workflows for company/user management, statistics, and bulk-upload validation for operations teams.",
         ],
     },
 ];
@@ -273,7 +144,7 @@ export const projects = [
         description: 'Designed and built a C++ program using LLVM to partition secure and non-secure code sections, enhancing security in embedded systems.',
         link: 'https://github.com/ArcXzost/llvm-secure-partitioning',
     },
-   
+
     {
         iconUrl: data,
         theme: 'btn-back-black',
@@ -289,6 +160,18 @@ export const projects = [
         description: 'Built a GUI application that uses a graph database to manage properties, landlords, and tenants, streamlining property management.',
         link: 'https://github.com/Ashutoshpandey29/PROPERTY_NETWORKS/tree/master',
     },
-   
-   
+    {
+        iconUrl: shoppingCart,
+        theme: 'btn-back-blue',
+        name: 'FlipSmart',
+        description: 'Architected a multi-service AI shopping assistant with a React/Three.js 3D frontend and Node.js/Flask backends, integrating Gemini, Azure STT, and Google Cloud TTS for real-time conversational recommendations with viseme/morph-target facial animation.',
+        link: 'https://github.com/Ashutoshpandey29/FlipSmart',
+    },
+    {
+        iconUrl: networkGraph,
+        theme: 'btn-back-green',
+        name: 'FundSpy',
+        description: 'Built a graph-based transaction monitoring system using a custom DFS cycle-detection algorithm to identify circular fund transfers, deployed as a Flask application on AWS Elastic Beanstalk with Scikit-learn classifier inference.',
+        link: 'https://github.com/Ashutoshpandey29/FUND_SPY',
+    },
 ];

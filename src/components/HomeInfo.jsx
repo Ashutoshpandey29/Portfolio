@@ -23,12 +23,12 @@ const renderContent = {
         <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
             Namaste! I am <span className="font-semibold">Ashutosh</span> 👋
             <br />
-            A Software Developer from India!
+            A Senior Software Engineer from India!
         </h1>
     ),
     2 : (
         <InfoBox
-            text = "Worked as an Intern for Healthcare Peoject funded by SERB! and learnt many skills along the way"
+            text = "I build search, ranking, and GenAI systems at InfoEdge, working on candidate recommendation for 400K+ candidates"
             link = "/about"
             btnText = "Learn More"
         />
